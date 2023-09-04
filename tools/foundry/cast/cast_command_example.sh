@@ -4,6 +4,9 @@
 ETH_ADDRESS=${1:-"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"}
 ETH_ADDRESS_PK=${2:-"ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"}
 
+# 部署的合约
+CONTRACT_ADDRESS=${3:-"0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"}
+
 # 设置 RPC URL
 AXIOM_RPC_OPTION_URL="--rpc-url http://127.0.0.1:8881"
 
@@ -32,11 +35,11 @@ cast publish $AXIOM_RPC_OPTION_URL --async $TX
 echo "3.2. 获取一个交易的交易收据："
 cast receipt $AXIOM_RPC_OPTION_URL `cast publish $AXIOM_RPC_OPTION_URL --async $TX`
 
-#echo "3.3. 签署并发布一项交易："
-#cast send $AXIOM_RPC_OPTION_URL
+echo "3.3. 签署并发布一项交易："
+cast send 0x264e23168e80f15e9311F2B88b4D7abeAba47E54 --value 0.1ether $AXIOM_RPC_OPTION_URL --private-key $ETH_ADDRESS_PK
 
-#echo "3.4. 在不发布交易的情况下对一个账户进行调用："
-#cast call $AXIOM_RPC_OPTION_URL
+echo "3.4. 在不发布交易的情况下对一个账户进行调用："
+cast call $AXIOM_RPC_OPTION_URL 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "balanceOf(address)(uint256)" $ETH_ADDRESS
 
 echo "3.5. 执行一个原始的 JSON-RPC 请求"
 cast rpc eth_getBlockByNumber "latest" "false" $AXIOM_RPC_OPTION_URL
@@ -45,7 +48,7 @@ echo "3.6. 获得有关交易的信息："
 cast tx $AXIOM_RPC_OPTION_URL `cast publish $AXIOM_RPC_OPTION_URL --async $TX`
 
 echo "3.7. 估算交易的 Gas 成本"
-cast estimate 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 --value 0.1ether "deposit()" $AXIOM_RPC_OPTION_URL
+cast estimate $CONTRACT_ADDRESS --value 0.1ether "deposit()" $AXIOM_RPC_OPTION_URL
 
 #4 Block 命令
 echo "4.1. 获取最新的区块号："
@@ -58,8 +61,8 @@ cast balance $ETH_ADDRESS ${AXIOM_RPC_OPTION_URL}
 echo "5.2. 获取账户 $ETH_ADDRESS 的 nonce："
 cast nonce $ETH_ADDRESS ${AXIOM_RPC_OPTION_URL}
 
-#echo "5.3. 获取一个合约的字节码："
-#cast code $AXIOM_RPC_OPTION_URL
+echo "5.3. 获取一个合约的字节码："
+cast code $AXIOM_RPC_OPTION_URL $CONTRACT_ADDRESS
 
 #6 Utility Commands
 
@@ -80,5 +83,5 @@ echo "7.3. 签署消息："
 cast wallet sign --private-key $ETH_ADDRESS_PK "hello"
 
 #echo "7.4. 验证一个信息的签名："
-#cast wallet verify --address $ETH_ADDRESS `cast wallet sign --private-key $ETH_ADDRESS_PK "hello"`
+#cast wallet verify
 
