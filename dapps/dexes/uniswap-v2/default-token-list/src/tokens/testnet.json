@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Wrapped Ether",
+    "address": "0x5aea6ea637074b48fdFb32Ad9291009E03d0cB2d",
+    "symbol": "WETH",
+    "decimals": 18,
+    "chainId": 1356,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
+  },
+  {
+    "name": "AxmToken1",
+    "address": "0xc02a32466B58D814919713c8081aC29e7eF7b5bE",
+    "symbol": "AX1",
+    "decimals": 18,
+    "chainId": 1356,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  },
+  {
+    "name": "AxmToken2",
+    "address": "0xE4AE6D1d985dE8F0902F1d3ac4a68A88df5EDe50",
+    "symbol": "AX2",
+    "decimals": 18,
+    "chainId": 1356,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  },
+  {
+    "name": "AxmToken3",
+    "address": "0xa05e1f84cbD12717025D957b0B9667FC63deE09b",
+    "symbol": "AX3",
+    "decimals": 18,
+    "chainId": 1356,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  }
+]
