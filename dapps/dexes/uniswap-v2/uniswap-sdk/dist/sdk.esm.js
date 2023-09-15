@@ -17,7 +17,7 @@ var ChainId;
 
 (function (ChainId) {
   ChainId[ChainId["MAINNET"] = 65524] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 1356] = "TESTNET";
+  ChainId[ChainId["TESTNET"] = 23411] = "TESTNET";
 })(ChainId || (ChainId = {}));
 
 var TradeType;

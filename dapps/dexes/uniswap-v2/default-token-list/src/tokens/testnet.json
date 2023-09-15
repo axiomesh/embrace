@@ -4,7 +4,7 @@
     "address": "0x5aea6ea637074b48fdFb32Ad9291009E03d0cB2d",
     "symbol": "WETH",
     "decimals": 18,
-    "chainId": 1356,
+    "chainId": 23411,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
   },
   {
@@ -12,7 +12,7 @@
     "address": "0xc02a32466B58D814919713c8081aC29e7eF7b5bE",
     "symbol": "AX1",
     "decimals": 18,
-    "chainId": 1356,
+    "chainId": 23411,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
   },
   {
@@ -20,7 +20,7 @@
     "address": "0xE4AE6D1d985dE8F0902F1d3ac4a68A88df5EDe50",
     "symbol": "AX2",
     "decimals": 18,
-    "chainId": 1356,
+    "chainId": 23411,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
   },
   {
@@ -28,7 +28,31 @@
     "address": "0xa05e1f84cbD12717025D957b0B9667FC63deE09b",
     "symbol": "AX3",
     "decimals": 18,
-    "chainId": 1356,
+    "chainId": 23411,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  },
+  {
+    "name": "Dai Stablecoin",
+    "address": "0x87dBFDad6586c50E5d886aa92F2aaE25614c24DC",
+    "symbol": "Dai",
+    "decimals": 18,
+    "chainId": 23411,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  },
+  {
+    "name": "USD//C",
+    "address": "0xfcF1100210E0364Ed484cB193E9772912bd92E0C",
+    "symbol": "USDC",
+    "decimals": 6,
+    "chainId": 23411,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+  },
+  {
+    "name": "Tether USD",
+    "address": "0x47e5DA4fa8Ca511ed8002FaBFAeE6021b297c5BA",
+    "symbol": "USDT",
+    "decimals": 6,
+    "chainId": 23411,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
   }
 ]

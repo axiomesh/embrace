@@ -20,23 +20,21 @@ export function isAddress(value: any): string | false {
 // todo 需要适配修改：修改浏览器前缀
 const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   65524: '',
-  // 1356: 'testnet.'
-  1356: '172.16.13.131/#'
+  23411: 'scan.aries.axiomesh.io',
+  // 1356: '172.16.13.131'
 }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
   // todo 需要适配修改：修改浏览器前缀
   // const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1356]}etherscan.io`
-  const prefix = `http://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1356]}`
+  const prefix = `http://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[23411]}`
 
   switch (type) {
     case 'transaction': {
-      // return `${prefix}/tx/${data}`
-      return `${prefix}/txs-detail/${data}`
+      return `${prefix}/tx/${data}`
     }
     case 'token': {
-      // return `${prefix}/token/${data}`
-      return `${prefix}/token-detail/${data}`
+      return `${prefix}/token/${data}`
     }
     case 'address':
     default: {

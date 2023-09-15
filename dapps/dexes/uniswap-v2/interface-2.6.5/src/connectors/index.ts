@@ -28,7 +28,7 @@ export function getNetworkLibrary(): Web3Provider {
 
 // todo 需要修改适配：修改MetaMask可以支持的链id，否则无法连接
 export const injected = new InjectedConnector({
-  supportedChainIds: [65524, 1356]
+  supportedChainIds: [65524, 23411]
 })
 
 // mainnet only
