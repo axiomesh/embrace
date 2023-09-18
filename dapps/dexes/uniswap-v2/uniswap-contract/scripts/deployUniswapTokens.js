@@ -20,7 +20,7 @@ async function main() {
     console.log(`AxmToken3 deployed to ${axmToken3.target}`);
 
     const Token1 = await ethers.getContractFactory("Dai");
-    const token1 = await Token1.deploy(1356);
+    const token1 = await Token1.deploy(23411);
 
     console.log(`Dai deployed to ${token1.target}`);
     const Token2 = await ethers.getContractFactory("TetherToken");

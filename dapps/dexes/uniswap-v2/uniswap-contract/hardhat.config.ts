@@ -2,11 +2,9 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "axiom",
+  // defaultNetwork: "axiom",
   networks: {
-    axiom: {
-      // gas: 6000000,
-      // gasPrice: 1000000000000,
+    axiom_local: {
       url: "http://127.0.0.1:8881",
       accounts: [
         `0x${process.env.PRIVATE_KEY}`,
@@ -19,7 +17,7 @@ const config: HardhatUserConfig = {
         '0x0b2624302ce7688a770512b1c494050d2275f7996258c470687c9d8a0ee4c041',
       ],
     },
-    aries: {
+    axiom_cloud: {
       url: "http://172.16.13.131:8881",
       accounts: [
         `0x${process.env.PRIVATE_KEY}`,
@@ -30,6 +28,18 @@ const config: HardhatUserConfig = {
         '0x25a12dd41cc079fb8a9c3cead09a164621207351239260b6e82412c73367d428',
         '0x93045b57a513ade05061e30605fd99c2a37fcd095c9a0313fa1aa2571f21f7a0',
         '0x0b2624302ce7688a770512b1c494050d2275f7996258c470687c9d8a0ee4c041',
+      ]
+    },
+    aries: {
+      url: "https://rpc4.aries.axiomesh.io",
+      accounts: [
+        `0x${process.env.PRIVATE_KEY}`,
+      ]
+    },
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.SEPOLIA_API_KEY}`,
+      accounts: [
+          `0x${process.env.PRIVATE_KEY}`,
       ]
     }
   },
