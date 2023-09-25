@@ -24,6 +24,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         factory = _factory;
         WETH = _WETH;
     }
+//    constructor() public {
+//        factory = 0x10Fdfb83Fb801E4bB80219411e9eC437AeC1e105;
+//        WETH = 0x5aea6ea637074b48fdFb32Ad9291009E03d0cB2d;
+//    }
+//
+//    function getThisContractAddress() public view returns (address) {
+//        return address(this);
+//    }
 
     receive() external payable {
         assert(msg.sender == WETH); // only accept ETH via fallback from the WETH contract

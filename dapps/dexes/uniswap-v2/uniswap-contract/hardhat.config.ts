@@ -18,7 +18,7 @@ const config: HardhatUserConfig = {
       ],
     },
     axiom_cloud: {
-      url: "http://172.16.13.131:8881",
+      url: "http://172.16.13.130:8881",
       accounts: [
         `0x${process.env.PRIVATE_KEY}`,
         '0x05c3708d30c2c72c4b36314a41f30073ab18ea226cf8c6b9f566720bfe2e8631',// axiom-2

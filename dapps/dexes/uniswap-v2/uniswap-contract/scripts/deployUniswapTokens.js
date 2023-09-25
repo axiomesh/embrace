@@ -15,9 +15,9 @@ async function main() {
     const axmToken1 = await AxmToken1.deploy("AxiomToken1", "AX1", mintAmount)
     const axmToken2 = await AxmToken1.deploy("AxiomToken2", "AX2", mintAmount)
     const axmToken3 = await AxmToken1.deploy("AxiomToken3", "AX3", mintAmount)
-    console.log(`AxmToken1 deployed to ${axmToken1.target}`);
-    console.log(`AxmToken2 deployed to ${axmToken2.target}`);
-    console.log(`AxmToken3 deployed to ${axmToken3.target}`);
+    console.log(`AXMTOKEN1_ADDR: ${axmToken1.target}`);
+    console.log(`AXMTOKEN2_ADDR: ${axmToken2.target}`);
+    console.log(`AXMTOKEN3_ADDR: ${axmToken3.target}`);
 
     const Token1 = await ethers.getContractFactory("Dai");
     const token1 = await Token1.deploy(23411);
